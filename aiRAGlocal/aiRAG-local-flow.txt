@@ -1,0 +1,53 @@
+-------
+this program is a RAG program. the user inputs a csv document into llm and asks a query. the llm will answer based on inputted document. the llm used is local (saved in mycomputer) and no API required
+user inputs the csv file - restaurant reviews 
+user to ask queries about restaurant reviews
+ 
+This program uses local model(Ollama llama3 llm model) saved in my computer and 
+uses mxbai model(also local) to convert text into vectors 
+to be saved in ChromaDB
+-------
+install llm model to mycomputer 
+
+to download and install ollama from - https://ollama.com/download/windows
+click start-find commpand prompt
+on command prompt-
+-type ollama run llama3 - installs llm model to your system
+-type ollama pull mxbai-embed-large - installs embedding model to your system
+(mxbai converts the text into embeddings and saves the data onto a database)
+once both are installed- now you have the llm model on your system and embedding model on your prompts
+
+------------
+main.py-
+load script and libraries
+enable model
+
+create template - has instructions to llm and takes 2 arguments context and query (comes from user input)
+prompt - use template
+chain - combines prmpt and llm model
+
+takes in user prompt
+invokes the retriever(get the answer from database based on the query asked)-sets context
+gets the answer from retirever and takes the query and feeds both into LLM
+get llm response and show it to user
+
+-------
+vector.py-
+load script and library
+
+save the csv file
+load the mxbai embedding model
+create db location folder and checks if it already exists?
+
+transforms raw CSV data into a list of structured LangChain objects and IDs so the vector database can store them
+
+setups connection to ChormaDB
+saves the text,metadata and vectors in the DB - /chrome_langchain_db
+retirever-
+-acts as a search tool
+-converts raw vector into normal langchain retriever interface
+-k=5 is to extract top 5 relevant documents
+
+-------------
+
+

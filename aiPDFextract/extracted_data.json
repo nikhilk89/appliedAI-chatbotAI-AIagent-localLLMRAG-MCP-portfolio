@@ -1,0 +1,75 @@
+{
+  "form_number": "5500-EZ",
+  "omb_no": "1545-1610",
+  "tax_year": "2023",
+  "tracking_number": "CA530082",
+  "part_i_annual_return_identification_information": {
+    "plan_year_beginning_date": "01/01/2022",
+    "plan_year_ending_date": "01/02/2023",
+    "this_return_is": {
+      "first_return_filed_for_plan": true,
+      "amended_return": false,
+      "final_return_filed_for_plan": false,
+      "short_plan_year_return": false
+    },
+    "filing_under": {
+      "form_5558": false,
+      "automatic_extension": false,
+      "special_extension": false,
+      "special_extension_description": ""
+    },
+    "foreign_plan": false,
+    "irs_late_filer_penalty_relief_program": false,
+    "retroactively_adopted_plan_secure_act_section_201": false
+  },
+  "part_ii_basic_plan_information": {
+    "name_of_plan": "Annual Return Plan",
+    "three_digit_plan_number_pn": "586",
+    "date_plan_first_became_effective": "02/05/2022",
+    "employer_information": {
+      "name": "Acme Corp Software",
+      "trade_name_of_business": "",
+      "in_care_of_name": "",
+      "mailing_address": "235, Park Street Avenue, FL",
+      "city_state_zip": "63052",
+      "ein": "735268329",
+      "telephone_number": "011536259",
+      "business_code": ""
+    },
+    "plan_administrator_information": {
+      "name": "",
+      "in_care_of_name": "",
+      "mailing_address": "",
+      "city_state_zip": "",
+      "ein": "532678",
+      "telephone_number": ""
+    },
+    "previous_filing_information": {
+      "employer_name": "",
+      "ein": "5732900",
+      "plan_name": "",
+      "pn": ""
+    },
+    "participants_information": {
+      "total_participants_beginning_of_year": "10",
+      "active_participants_beginning_of_year": "8",
+      "total_participants_end_of_year": "5",
+      "active_participants_end_of_year": "",
+      "terminated_employment_less_than_100_percent_vested": "2"
+    }
+  },
+  "part_iii_financial_information": {
+    "total_plan_assets": {
+      "beginning_of_year": "50000",
+      "end_of_year": "60000"
+    },
+    "total_plan_liabilities": {
+      "beginning_of_year": "4000",
+      "end_of_year": "5000"
+    },
+    "net_plan_assets": {
+      "beginning_of_year": "",
+      "end_of_year": ""
+    }
+  }
+}

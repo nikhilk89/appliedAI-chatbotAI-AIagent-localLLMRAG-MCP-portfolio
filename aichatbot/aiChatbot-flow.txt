@@ -1,0 +1,18 @@
+script loads
+load history function-load the history 
+- open chat_history.json file, read and format it
+
+chat_session = client.chats.create 
+- takes this loaded list
+
+take prompt input from user-stores in response
+-send it to chatg function
+
+chatg function
+-takes the prmpt from response and sends to gemini llm api
+-call savehistory function and overwrite with new prompt and llm response
+-formats llm response to return text response to user
+
+send the response to user and waits for next prompt
+
+

@@ -1,0 +1,58 @@
+The program allows user to instruct the llm/chatbot to use different applications using MCP acting as an Agent
+
+User gives prompt to claude llm and the based on the prompt the llm uses the MCP codes in the configuration file and 
+access different applications like 
+-playwright web browser automation
+-MySQL database
+-Excel
+-wesbite via REST API
+-FileSystem
+
+llm/chatbot- used in this setup is claude via Claude desktop application
+
+prompt is-
+goto https://rahulshettyacademy.com/client/#/auth/login click on register, pull any random record from registeration details(mysql database, record is student email id and password) and username tables and register them in the page, if any thing is missing, use your knowledge to input and then read attached postman collection (contains edpoint, API requests) to understand api contract and make a logic call with necessary information and confirm if logic call is success
+finally write then new registered details of the email and password to newdata.xlsx file in appropriate columns and autoformat it for proper spaces
+
+1. to scrape/automate/action anything on website
+open claude-file-settings-edit config-folder oepns- json config file
+remove all and set the playwright mcp codes
+also install node.js on mycomputer
+-it will go into website and will try to login but will get error and will tell all the things you need for login
+
+2. to pull data from MySQLdatabase
+same config file - add mysql mcp server code
+install uv
+also add mysql server path --> C:\Users\.....Python313\Lib\site-packages
+also add --> C:\Users....\Python313\Scripts\uv.exe
+install mysql server and database, make note of id, pwd, port names and others
+enter id, pwd, port, datanase name
+-now it takes user data from database and enters it into website and login is done
+
+3. to confirm login using REST API requests
+add rest api mcp data into config file
+use the postman json file to use the codes to login and tell if the registeration and login both are sucessful
+it makes new id, does login - gets success 200 ok with msg regsitered successfully
+it tries again with login id and enters website - and gets  200 msg success ok log success 
+
+4. now want to save the login id in excel
+-let llm get access to filesystem
+-created/edit excel files
+to let llm use the filesystems-to give a path and have it save a file
+add filesystem mcp into config file
+
+5. to saved login id and pwd in excel
+-add excel mcp into json file
+-use npx and not key 
+
+6. now enter the full prompt
+it will use sqldb login data, login to website, test registeration was sucesssful and save email id and pwd back into excel file
+
+
+
+
+
+
+
+
+

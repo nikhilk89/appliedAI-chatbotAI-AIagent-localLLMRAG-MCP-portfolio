@@ -1,0 +1,8 @@
+--- Research Output ---
+Timestamp: 2026-06-18 16:56:34
+
+Topic: Jupiter
+Summary: Jupiter is the largest planet in our solar system, classified as a gas giant. It boasts a mass 318 times that of Earth and exceeds twice the combined mass of all other planets in the solar system.
+Sources: Google Search
+Tools Used: search
+

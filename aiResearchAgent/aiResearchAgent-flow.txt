@@ -1,0 +1,56 @@
+there are 3 files
+main.py    ---has the main code
+tools.py   ---has the tools
+.env     ---stores the llm api key
+
+
+
+---main.py--
+load script and libraries
+load the tool.py file
+load .ent file which has the llm key
+*please register to gemini ai studio and get your own key
+
+create reseachreponse class-
+-to take in the response and convert into specific structure
+-(Topic, Summary, Sources, Tools Used)
+
+setup gemini llm with 0.7 temperature 
+create template with role and instructions for json output
+
+agent-LLM decides if it needs to use a tool based on prompt
+-combines llm, prompt and tools
+
+agent-executor-(loop)
+-this actually follows what agent instucts. use a tool, take response from agent and feed to agent. 
+-combines agents and tools
+-repeats until agent finalises an answer
+
+
+takes user prompt
+agent_executor.invoke() - runs the agent along with user prompt and uses the tools
+takes the reponse from llm in chunks and backticks
+puts the response json into reseachreponse parser and shows to user as summary
+-(Topic, Summary, Sources, Tools Used)
+
+
+--tools.py---
+this file containts 2 tools-
+-local file writer
+-web searh engine
+
+save_to_txt()-takes data text and appens to local text file (research_output.txt)
+
+1. save_tool
+-takes save_to_txt()function and puts it under langchain tool class-to act as a tool
+
+search-initialize DuckDuckGoSearchRun(), prebuild web search componenet by langchain_community.
+
+2. search_tool
+-Wraps search.run as a standard LangChain Tool named "search"
+-instructs the llm to use the tool whenever it needs up-to-date external web information
+
+---.env---
+GOOGLE_API_KEY="llm api key"
+*please register to gemini ai studio and get your own key
+

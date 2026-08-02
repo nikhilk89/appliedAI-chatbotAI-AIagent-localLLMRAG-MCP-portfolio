@@ -1,0 +1,14 @@
+script loads
+
+pdf_to_images function converts the inputted pdf into image at 300 DPI
+
+preprocess_image function to make image more readable
+-covert each page of to greyscale to identify color noise, increase contrats and sharpness
+
+extract_data_with_gemini function 
+-prepares instructions and rules
+-take processes images
+-sends to gemini llm with lower temperature and gets a response
+
+received response from gemini in json, printed to user, saved to extracted_data.json
+
